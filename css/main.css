@@ -110,7 +110,12 @@ textarea {
   font-weight: bold;
   font-style: normal;
 }
-
+p {
+  font-family: aaargh;
+}
+h1, h2, h3, h4 {
+  font-family: aleo;
+}
 a {
   color: #eee;
 }
@@ -118,38 +123,67 @@ a:hover {
   color: #888;
 }
 .page {
+ padding-top: 30px;
  width: 100%;
  margin: 0;
  background:cover;
  color: #eee;
 }
+
 .page h1 {
   text-align: center;
-  font-family: aleo;
   font-weight: bold;
 }
 
-.master-nav{
+.main-navbar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -1;
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  z-index:1000;
+}
+.main-navbar h2 {
+  display: inline;
+  color: #888;
 }
 .master-nav li{
-  display: block;
+  display: inline-block;
   font-family: aaargh;
 }
 .master-nav li:hover{
-  background-color: #555;
-  border-right: solid 3px #aaa;
-  border-bottom: solid 1px #aaa;
-
+  background-color: #555; 
 }
-
+.master-nav li.active {
+  background-color: #555; 
+}
 #home {
   background-color: #B9AE90;
   color: #333;
 }
+#home h3 {
+  text-align: center;
+  font-family: aleo; 
+}
+.hire-me .btn{
+  align-content:center;
+  width: 200px;
+  height: auto;
+  font-family: aleo;
+  font-size: 32px;
+  margin: 0 auto;
+}
 
+.home-category {
+ margin: 40px 0 40px; 
+ text-align: center;
+}
+.img-home {
+  display:block;
+  margin: auto;
+  height: 200px;
+  
+}
 #projects {
   background-color: #444;
 }
