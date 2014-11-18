@@ -92,21 +92,21 @@ textarea {
    ========================================================================== */
 @font-face {
   font-family: aaargh;
-  src: url(/fonts/Aaargh.ttf);
+  src: url(../fonts/Aaargh.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: aleo;
-  src: url(/fonts/Aleo-Regular.otf);
+  src: url(../fonts/Aleo-Regular.otf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: aleo;
-  src: url(/fonts/Aleo-Bold.otf);
+  src: url(../fonts/Aleo-Bold.otf);
   font-weight: bold;
   font-style: normal;
 }
@@ -165,9 +165,9 @@ a:hover {
   text-align: center;
   font-family: aleo; 
 }
-.hire-me .btn{
+.btn-main .btn{
   align-content:center;
-  width: 200px;
+  width: 300px;
   height: auto;
   font-family: aleo;
   font-size: 32px;
@@ -187,13 +187,38 @@ a:hover {
 #projects {
   background-color: #444;
 }
-
-#skills {
-  background-color: #680000;
+#websume-carousel {
+ margin-bottom: 40px;
+}
+.slideshow-image {
+  width: auto;
+  margin: 0 auto;
+  border: thick;
+  padding:1px;
+  border:1px solid #eee;
+  background-color:#111;
 }
 
-#personal {
+.descriptions {
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ss-desc {
+  display: none;
+}
+.ss-desc.active {
+  display: block;
+  margin: 15px;
+}
+#skills {
   background-color: #B9AE90;
+  color: #333;
+}
+.skill-icon {
+  margin:40px;
+  width: 128px;
+  height: auto;
 }
 
 #contact {

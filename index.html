@@ -15,6 +15,8 @@
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/handlebars-v2.0.0.js"></script>
+
     </head>
     <body data-spy='scroll' data-target='.navigation'>
         <!--[if lt IE 8]>
@@ -29,8 +31,8 @@
               <div class = "col-md-3">
                 <h2>Ryan Canty</h2>
               </div>
-              <div class = "col-md-6 col-md-offset-2 navigation">
-                <ul class="nav master-nav">
+              <div class = "col-md-9 navigation">
+                <ul class="nav master-nav pull-right">
                   <li>
                     <a href = "#home">Home</a>
                   </li>
@@ -39,9 +41,6 @@
                   </li>
                   <li>
                     <a href = "#skills">Skills</a>
-                  </li>
-                  <li>
-                    <a href = "#personal">Personal</a>
                   </li>
                   <li>
                     <a href = "#contact">Contact</a>
@@ -56,12 +55,12 @@
           <div id = "home" class = "page">
             <div class = 'container'>
               <div class = "row">
-                <h1>Ryan Canty | Front End Developer</h1>
+                <h1>Ryan Canty | Software Developer</h1>
                 <h3>Personally Crafted Websites For Your Small Business</h3>
                 <br><br><br><br>
                 <h1>
-                  <div class = 'hire-me'>
-                    <a class = 'btn btn-danger' href= '#contact'>Hire Me!</a> 
+                  <div class = 'btn-main'>
+                    <a class = 'btn btn-danger' href= '#projects'>Current Projects</a> 
                   </div>
                 </h1>
                 <br><br>
@@ -102,6 +101,63 @@
              <div class = 'container'>
               <div class = "row">
                 <h1>Current and Past Projects</h1>
+                 <!-- descriptions -->
+                 <div class = 'descriptions'>
+                  <div class = 'ss-desc active' id = 'desc-truefit2'>
+                    <h4><a href="http://truefittattoosd.com">TrueFitTattooSD.com</a></h4>
+                    TrueFit is a very prominent tattoo shop in College Area of San Diego. I wrote the site in a Ruby on Rails, CoffeeScript, HAML stack. The client, Tomas Archuleta needed a site that would be extensible and allow him to add artists. Also he wanted artists to be able to manage their own images as they created their art.
+                  </div>
+
+                  <div class = 'ss-desc'  id = 'desc-mft'>
+                    <h4><a href='http://mymfthours.herokuapp.com'>MyMFTHours.herokuapp.com</a></h4>
+                    The client noticed that there was no free way to track client hours for her MFT (Marriage and Family Therapy) degree.  It allows users to track hours in a calender view from FullCalendar.js. Once users have hours tracked they can order and total their hours using pre-programmed BBS rules.
+                  </div>
+                  <div class = 'ss-desc' id = 'desc-fish'>
+                      <h4><a href="https://itunes.apple.com/us/app/gospel-in-every-language-5fish/id659138487?mt=8&ign-mpt=uo%3D4">
+                              5Fish iOS App</a></h4>
+                      As a university senior capstone, I lead a team to design and build a prototype of the 5Fish iOS app currently on the App Store. The app is designed to download, play and share a Gospel message in over 6000 languages.
+									</div>
+                  <div class='ss-desc' id = 'desc-discipline'>
+                    <h4><a href="https://chrome.google.com/webstore/detail/you-lack-discipline/eeadgcfnjeklognahpjfofaimpgednii?utm_source=chrome-ntp-icon">You Lack Discipline! Chrome Extension</a></h4>
+                    This fun little extension was designed to help people keep focused on the task at hand and not mindlessly wasting time on Facebook. You can store sites you don't want to view in a list and if you navigte to one of them, you'll be redirected to an image of Master Foo Bar who tells you to 'Get back to work!'
+                  </div>
+                </div>
+
+                <div id="websume-carousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#websume-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#websume-carousel" data-slide-to="1"></li>
+                    <li data-target="#websume-carousel" data-slide-to="2"></li>
+                    <li data-target="#websume-carousel" data-slide-to="3"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active" id = 'truefit2'>
+                      <img class = 'slideshow-image' src="img/truefit2.png" alt="profile">
+                    </div>
+                    <div class="item" id = 'mft'>
+                      <img class = 'slideshow-image' src="img/mft1.png" alt="mft">
+                    </div>
+                    <div class="item" id= 'fish'>
+                        <img class="slideshow-image" src="img/fish.png" alt='5fish'>
+                    </div>
+                    <div class="item" id = 'discipline'>
+                      <img class = 'slideshow-image' src="img/discipline.png" alt="discipline">
+                    </div>
+
+                  </div>
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#websume-carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#websume-carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -110,18 +166,32 @@
             <div class = 'container'>
               <div class = "row">
                 <h1>Skills and Work Experience</h1>
+                <div id = "skill-icons"></div>
+                <script id="skill-icons-template" type="text/x-handlebars-template">
+                    {{#each icons}}
+                      <img class = 'skill-icon' src = 'img/skills/{{file}}' data-toggle="tooltip" data-placement="bottom" title='{{desc}}'/> 
+                    {{/each}}
+                </script>
+
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h2>Qualcomm Technologies Inc.</h2>
+                    <b>May 2012 - Present</b>
+                  </div>
+                  <div class="col-sm-9"></div>
+                    <ul>
+<li>Currently I'm part of a small, agile team that worked on a fork of <a href="https://github.com/gitlabhq/gitlabhq">Gitlab</a>, an open source, self-hosted version control software similar to Github Enterprise and using the Ruby on Rails stack. I have been a full-stack engineer designing library modules to encapsulate Git calls, gaining valuable experience in Ruby on Rails in general, and have lead all major front-end changes since I started using CoffeeScript, Bootstrap, and HAML.
+</li>
+<li>Worked with Qualcomm’s Security team to design and implement a script for parsing embedded C and C++ code to prevent insecure inter-processor communication protocols from being committed without proper security and encryption checks. Used multiprocessing in Python and a Unix cron job to schedule a queue of scans that parsed source code using Pyparsing.
+</li>
+<li>Worked on a Python-based testing framework for Android which involved system calls, creating system processes and multithreading. I also became proficient in Python, Java, and Android Development</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div id = "personal" class = "page">
-            <div class = 'container'>
-              <div class = "row">
-                <h1>Personal Endeavors and Hobbies</h1>
-              </div>
-            </div>
-          </div>
-
+          
           <div id = "contact" class = "page">
             <div class = 'container'>
               <div class = "row">
@@ -129,29 +199,9 @@
                   <h1>Contact Info</h1>  
                 </div>
               </div>
-            </div>
-          </div>
-  
-        </div>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+						</div>
+					</div>
+      	   
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
