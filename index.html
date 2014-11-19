@@ -19,7 +19,7 @@
 
     </head>
     <body data-spy='scroll' data-target='.navigation'>
-        <!--[if lt IE 8]>
+        <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
       <div class = 'cover-container'>
@@ -34,16 +34,16 @@
               <div class = "col-md-9 navigation">
                 <ul class="nav master-nav pull-right">
                   <li>
-                    <a href = "#home">Home</a>
+                    <a href = "#home" data-target='#home'>Home</a>
                   </li>
                   <li>
-                    <a href = "#projects">Portfolio</a>
+                    <a href = "#projects" data-target='#projects'>Portfolio</a>
                   </li>
                   <li>
-                    <a href = "#skills">Skills</a>
+                    <a href = "#skills" data-target='#skills'>Skills</a>
                   </li>
                   <li>
-                    <a href = "#contact">Contact</a>
+                    <a href = "#contact" data-target='#contact'>Contact</a>
                   </li>     
                 </ul>
               </div>
@@ -56,11 +56,11 @@
             <div class = 'container'>
               <div class = "row">
                 <h1>Ryan Canty | Software Developer</h1>
-                <h3>Personally Crafted Websites For Your Small Business</h3>
+                <h3>Artfully Crafted Code</h3>
                 <br><br><br><br>
                 <h1>
                   <div class = 'btn-main'>
-                    <a class = 'btn btn-danger' href= '#projects'>Current Projects</a> 
+                    <a class = 'btn btn-danger' href= '#projects'>Contact me</a> 
                   </div>
                 </h1>
                 <br><br>
@@ -84,7 +84,7 @@
                     </p>
                   </div>
                   <div class = 'col-md-4 home-category'>
-                    <img class = 'img-circle img-home' src = 'img/team_building.png'/>
+                    <img class = ' img-home' src = 'img/team_building.png'/>
                     <h4>Plays well with others</h4>
                     <p>
                     Not only do I do freelance work, but I also work very well with teams during my full-time job as a 
@@ -100,23 +100,35 @@
           <div id = "projects" class = "page">
              <div class = 'container'>
               <div class = "row">
-                <h1>Current and Past Projects</h1>
+                <h1>Portfolio</h1>
                  <!-- descriptions -->
                  <div class = 'descriptions'>
                   <div class = 'ss-desc active' id = 'desc-truefit2'>
                     <h4><a href="http://truefittattoosd.com">TrueFitTattooSD.com</a></h4>
                     TrueFit is a very prominent tattoo shop in College Area of San Diego. I wrote the site in a Ruby on Rails, CoffeeScript, HAML stack. The client, Tomas Archuleta needed a site that would be extensible and allow him to add artists. Also he wanted artists to be able to manage their own images as they created their art.
                   </div>
-
-                  <div class = 'ss-desc'  id = 'desc-mft'>
+									
+									<div class='ss-desc' id='desc-gitlab'>
+										<h4><a href="https://github.com/gitlabhq/gitlabhq">Qualcomm ChipCode | A Fork of GitLab</a></h4>
+							      Currently I'm on a small team of developers at Qualcomm working on ChipCode, a GitHub fork of GitLab. I've added several features to this project on the front end including a brand new front page, Solr search integration, help and blog section as well as many back end features.
+									</div>
+                  
+									<div class = 'ss-desc'  id = 'desc-mft'>
                     <h4><a href='http://mymfthours.herokuapp.com'>MyMFTHours.herokuapp.com</a></h4>
                     The client noticed that there was no free way to track client hours for her MFT (Marriage and Family Therapy) degree.  It allows users to track hours in a calender view from FullCalendar.js. Once users have hours tracked they can order and total their hours using pre-programmed BBS rules.
                   </div>
+                  <div class="ss-desc" id="desc-passweb">
+                    <h4><a href="http://passweb.herokuapp.com">Passweb.herokuapp.com</a></h4>
+                    I decided I wanted to access my passwords from anywhere, securely. I designed and developed Passweb using Ruby on Rails. Passwords are secure using 2-way AES-128 encryption with the hash key compiled between user data from the database, and strings from two separate servers.
+                  </div>
                   <div class = 'ss-desc' id = 'desc-fish'>
-                      <h4><a href="https://itunes.apple.com/us/app/gospel-in-every-language-5fish/id659138487?mt=8&ign-mpt=uo%3D4">
-                              5Fish iOS App</a></h4>
-                      As a university senior capstone, I lead a team to design and build a prototype of the 5Fish iOS app currently on the App Store. The app is designed to download, play and share a Gospel message in over 6000 languages.
+                      <h4><a href="https://itunes.apple.com/us/app/gospel-in-every-language-5fish/id659138487?mt=8&ign-mpt=uo%3D4">5Fish iOS App</a></h4>
+                      As a university senior capstone, I lead a team to design and build a prototype of the 5Fish iOS app currently on the App Store for the Global Recording Network (GRN). The app is designed to download, play and share a Gospel message in over 6000 languages.
 									</div>
+                  <div class="ss-desc" id="desc-websume">
+                    <h4><a href="#">This site</a></h4>
+                    This site was built using HTML5 Boilerplate, Twitter Bootstrap, jQuery and Handlebars.js templates. 
+                  </div>
                   <div class='ss-desc' id = 'desc-discipline'>
                     <h4><a href="https://chrome.google.com/webstore/detail/you-lack-discipline/eeadgcfnjeklognahpjfofaimpgednii?utm_source=chrome-ntp-icon">You Lack Discipline! Chrome Extension</a></h4>
                     This fun little extension was designed to help people keep focused on the task at hand and not mindlessly wasting time on Facebook. You can store sites you don't want to view in a list and if you navigte to one of them, you'll be redirected to an image of Master Foo Bar who tells you to 'Get back to work!'
@@ -130,21 +142,34 @@
                     <li data-target="#websume-carousel" data-slide-to="1"></li>
                     <li data-target="#websume-carousel" data-slide-to="2"></li>
                     <li data-target="#websume-carousel" data-slide-to="3"></li>
+										<li data-target="#websume-carousel" data-slide-to="4"></li>
+                    <li data-target="#websume-carousel" data-slide-to="5"></li>
+                    <li data-target="#websume-carousel" data-slide-to="6"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
                     <div class="item active" id = 'truefit2'>
-                      <img class = 'slideshow-image' src="img/truefit2.png" alt="profile">
+                      <img class = 'slideshow-image' src="img/truefit2.png" alt="TrueFitTattooSD.com">
                     </div>
+										<div 
+										<div class="item" id = "gitlab">
+											<img class= 'slideshow-image' src = 'img/gitlab.png' alt='GitLab'>
+										</div>
                     <div class="item" id = 'mft'>
-                      <img class = 'slideshow-image' src="img/mft1.png" alt="mft">
+                      <img class = 'slideshow-image' src="img/mft1.png" alt="MyMFTHours.herokuapp.com">
+                    </div>
+                    <div class="item" id="passweb">
+                      <img class="slideshow-image" src="img/passweb.png" alt="Passweb.herokuapp.com">
                     </div>
                     <div class="item" id= 'fish'>
-                        <img class="slideshow-image" src="img/fish.png" alt='5fish'>
+                        <img class="slideshow-image" src="img/fish.png" alt='5fish iOS App'>
+                    </div>
+                    <div class="item" id="websume">
+                      <img class= "slideshow-image" src="img/websume.png" alt="This site">
                     </div>
                     <div class="item" id = 'discipline'>
-                      <img class = 'slideshow-image' src="img/discipline.png" alt="discipline">
+                      <img class = 'slideshow-image' src="img/discipline.png" alt="You Lack Discipline! Chome Extension">
                     </div>
 
                   </div>
@@ -178,9 +203,9 @@
                     <h2>Qualcomm Technologies Inc.</h2>
                     <b>May 2012 - Present</b>
                   </div>
-                  <div class="col-sm-9"></div>
-                    <ul>
-<li>Currently I'm part of a small, agile team that worked on a fork of <a href="https://github.com/gitlabhq/gitlabhq">Gitlab</a>, an open source, self-hosted version control software similar to Github Enterprise and using the Ruby on Rails stack. I have been a full-stack engineer designing library modules to encapsulate Git calls, gaining valuable experience in Ruby on Rails in general, and have lead all major front-end changes since I started using CoffeeScript, Bootstrap, and HAML.
+                  <div class="col-sm-9">
+                    <ul class = 'bordered-list'>
+<li>Currently I'm part of a small, agile team that worked on a fork of <a href="https://github.com/gitlabhq/gitlabhq">GitLab</a>, an open source, self-hosted version control software similar to Github Enterprise and using the Ruby on Rails stack. I have been a full-stack engineer designing library modules to encapsulate Git calls, gaining valuable experience in Ruby on Rails in general, and have lead all major front-end changes since I started using CoffeeScript, Bootstrap, and HAML.
 </li>
 <li>Worked with Qualcomm’s Security team to design and implement a script for parsing embedded C and C++ code to prevent insecure inter-processor communication protocols from being committed without proper security and encryption checks. Used multiprocessing in Python and a Unix cron job to schedule a queue of scans that parsed source code using Pyparsing.
 </li>
@@ -195,26 +220,72 @@
           <div id = "contact" class = "page">
             <div class = 'container'>
               <div class = "row">
-                <div class = 'col-xs-12'>
-                  <h1>Contact Info</h1>  
+                <div class = 'col-sm-12'>
+                  <h1>Contact Info</h1>
+                  <div style="margin:40px"></div>
+
+                  <div class="row">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <img class="contact-icon" src="img/email.png">
+                      </div>
+                      <div class="col-md-4">
+                        <h2><a href="mailto:jrcanty@gmail.com">jrcanty@gmail.com</a></h2>
+                      </div>
+                      <div class="col-md-2">
+                        <img class="contact-icon" src="img/twitter.png">
+                      </div>
+                      <div class="col-md-4">
+                        <h2><a href="https://twitter.com/jryancanty">@jryancanty</a></h2>
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <img class="contact-icon" src="img/github.png">
+                      </div>
+                      <div class="col-md-4">
+                        <h3><a href="https://github.com/onetwopunch">github.com/onetwopunch</a></h3>
+                      </div>
+                      <div class="col-md-2">
+                        <img class="contact-icon" src="img/linkedin.png">
+                      </div>
+                      <div class="col-md-4">
+                        <h2><a href="https://www.linkedin.com/pub/ryan-canty/35/b9b/a49">LinkedIn: Ryan Canty</a></h2>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <img class="contact-icon" src="img/facebook.png">
+                      </div>
+                      <div class="col-md-4">
+                        <h2><a href="https://www.facebook.com/jrcanty">/jrcanty</a></h2>
+                      </div>
+                      <div class="col-md-2">
+                        <img class="contact-icon" src="img/instagram.png">
+                      </div>
+                      <div class="col-md-4">
+                        <h2><a href="https://instagram.com/jryancanty">@jryancanty</a></h2>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 						</div>
+            <div class="websume-footer"></div>
 					</div>
+
+          
+
+        </div>
       	   
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
     </body>
 </html>

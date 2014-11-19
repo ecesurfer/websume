@@ -1,6 +1,6 @@
 initPageClass = function () {
   $('.page').css('min-height', window.innerHeight);
-  $('.slideshow-image').css('height', window.innerHeight * 0.75);
+  $('.slideshow-image').css('height', window.innerHeight * 0.65);
 };
 $(window).resize(initPageClass);
 
@@ -15,7 +15,6 @@ initSlideshowCaptions = function() {
 initSkills = function() {
   var source = $('#skill-icons-template').html();
   var template = Handlebars.compile(source);
-  console.log(template);
   var context = { icons: [
     {file : "angular.png", desc : "AngularJS | A front-end JavaScript framework designed by Google"},
     {file : "coffeescript.png", desc: "CoffeeScript | Object-oriented scripting language that compiles into JavaScript"},
@@ -27,15 +26,30 @@ initSkills = function() {
     {file:"rails.png", desc : "Ruby on Rails | A web framework that uses Ruby to dominate some of the best web 2.0 apps on the market"},
     {file:"ruby.png", desc : "Ruby | A powerful object oriented scripting language used in Ruby on Rails"},
     {file:"terminal.png", desc: "Linux/Unix Terminal | A necessity of any web developer is to know the command line."}] };
-  var html = template(context);
-  console.log(html); 
+  var html = template(context); 
   $('#skill-icons').html(html);
   $('[data-toggle="tooltip"]').tooltip();
 }
 
+initScroll = function() {
+	var scrollToTarget = function(el, ms) {
+		var speed = (ms) ? ms :600;
+		$('html,body').animate({scrollTop: $(el).offset().top}, speed);
+	};
+	$('.master-nav li a').click(function(ev){
+		ev.preventDefault();
+		target = $(this).data('target');
+		scrollToTarget(target);
+	});
+}
+
+initBuildings = function() {
+
+}
 $(document).ready( function() {
   initPageClass();
   initSlideshowCaptions();
   initSkills();
+	initScroll();
   
 });

@@ -110,7 +110,7 @@ textarea {
   font-weight: bold;
   font-style: normal;
 }
-p {
+p, body{
   font-family: aaargh;
 }
 h1, h2, h3, h4 {
@@ -210,19 +210,41 @@ a:hover {
 .ss-desc.active {
   display: block;
   margin: 15px;
+  height: 80px;
 }
 #skills {
   background-color: #B9AE90;
   color: #333;
 }
 .skill-icon {
-  margin:40px;
+  margin:50px;
   width: 128px;
   height: auto;
 }
-
+.bordered-list {
+  list-style-type: none;
+}
+.bordered-list li {
+  border-bottom: solid 1px rgba(230, 230, 230, .5);
+  padding-bottom: 15px;
+  margin-top:20px;
+}
 #contact {
-  background-color: #333;
+  background-color: #444;
+}
+.contact-icon {
+  height: 80px;
+  margin:10px;
+  width: auto;
+}
+.websume-footer {
+  display: block;
+  position: relative;
+  bottom: -150px;
+  left:0;
+  width: 100%;
+  height:100px;
+  background-color: #ddd;
 }
 
 
