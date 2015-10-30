@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="icon" type="image/png" href="favicon.ico">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -18,78 +18,85 @@
         <script src="js/vendor/handlebars-v2.0.0.js"></script>
 
     </head>
-    <body data-spy='scroll' data-target='.navigation'>
+    <body data-spy='scroll' data-target='.navbar-nav'>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-      <div class = 'cover-container'>
-        
-      
-        <div class="main-navbar">
-          <div class = "container">
-            <div class = "row">
-              <div class = "col-md-3">
-                <h2>Ryan Canty</h2>
-              </div>
-              <div class = "col-md-9 navigation">
-                <ul class="nav master-nav pull-right">
-                  <li>
-                    <a href = "#home" data-target='#home'>Home</a>
-                  </li>
-                  <li>
-                    <a href = "#projects" data-target='#projects'>Portfolio</a>
-                  </li>
-                  <li>
-                    <a href = "#skills" data-target='#skills'>Skills</a>
-                  </li>
-                  <li>
-                    <a href = "#contact" data-target='#contact'>Contact</a>
-                  </li>     
-                </ul>
-              </div>
-            </div>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand my-brand" href="#">J. Ryan Canty</a>
           </div>
+          <div id="main-navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href = "#home" data-target='#home'>Home</a>
+              </li>
+              <li>
+                <a href = "#projects" data-target='#projects'>Portfolio</a>
+              </li>
+              <li>
+                <a href = "#skills" data-target='#skills'>Skills</a>
+              </li>
+              <li>
+                <a href = "#contact" data-target='#contact'>Contact</a>
+              </li>
+              <li>
+                <a href="http://lowbrowcoder.me/articles/" target="_blank">Blog</a>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
+      </nav>
 
 
           <div id = "home" class = "page">
             <div class = 'container'>
               <div class = "row">
-                <h1>Ryan Canty | Software Developer</h1>
+                <h1>J. Ryan Canty | Software Engineer</h1>
                 <h3>Artfully Crafted Code</h3>
                 <br><br><br><br>
                 <h1>
                   <div class = 'btn-main'>
-                    <a class = 'btn btn-danger' href= '#projects'>Contact me</a> 
+                    <a class = 'btn btn-danger' href= '#projects'>Contact me</a>
                   </div>
                 </h1>
                 <br><br>
                 <div class='row'>
                   <div class = 'col-md-4 home-category'>
                     <img class = 'img-circle img-home' src = 'img/male_human.png'/>
-                    <h4>Freelancer Extrodinaire</h4>
+                    <h4>Background</h4>
                     <p>
-                      I do full customized web sites as a freelancer. Whether you need a simple static website for
-                      a small business, a web app with a large amount of back-end work, or even a full fledged 
-                      content management sytem, I'm your guy.
+                      Specifically in the open source web space, my passion lies in software engineering leadership,
+                      problem solving, and learning new skills. I am dedicated and motivated to design innovative solutions
+                      to complex problems and work with a team to execute those solutions. Whatever the problem, I am confident
+                      in my ability to learn the necessary skills to accomplish the task and exceed expectations.
                     </p>
                   </div>
                   <div class = 'col-md-4 home-category'>
                     <img class = 'img-circle img-home' src = 'img/macbook.png'/>
-                    <h4>Always using the right tools</h4>
+                    <h4>Skills</h4>
                     <p>
-                      The right tools for the job are always of the utmost importance and that's what you'll get with me. 
-                      I am proficient in many open source tools and software, always stay up to date in learning new technologies,
-                      and use the best equipment to get your project done right.
+                      Through my experience I have learned a wide array of technologies including Ruby on Rails,
+                      JavaScript, HTML, CSS, C/C++, Python, Linux Bash, and Android/iOS development. Though my experience
+                      is broad, I would also consider myself an expert in Ruby and the Rails framework as well as Git SCM.
+                      I also am well versed in Agile and the Scrum process in particular.
                     </p>
                   </div>
                   <div class = 'col-md-4 home-category'>
                     <img class = ' img-home' src = 'img/team_building.png'/>
-                    <h4>Plays well with others</h4>
+                    <h4>Leadership and Innovation</h4>
                     <p>
-                    Not only do I do freelance work, but I also work very well with teams during my full-time job as a 
-                    front-end developer in San Diego. If you have a job that requires more than one person
-                    rest assured that I will be able to work effectively in any environment.
+                      With my experience, I am confident that I would be able to help grow a development team and encourage best-practices and innovation in writing code, testing, and scalability.
+                      My background as a technical lead in university as the IEEE President and lead engineer on our senior
+                      capstone to my leadership experience at Qualcomm and Fullscreen make me confident in my abilities to lead a team
+                      from proof of concept to a multi-service application functioning at scale.
                     </p>
                   </div>
                 </div>
@@ -107,12 +114,12 @@
                     <h4><a href="http://truefittattoosd.com">TrueFitTattooSD.com</a></h4>
                     TrueFit is a very prominent tattoo shop in College Area of San Diego. I wrote the site in a Ruby on Rails, CoffeeScript, HAML stack. The client, Tomas Archuleta needed a site that would be extensible and allow him to add artists. Also he wanted artists to be able to manage their own images as they created their art.
                   </div>
-									
+
 									<div class='ss-desc' id='desc-gitlab'>
 										<h4><a href="https://github.com/gitlabhq/gitlabhq">Qualcomm ChipCode | A Fork of GitLab</a></h4>
 							      Currently I'm on a small team of developers at Qualcomm working on ChipCode, a GitHub fork of GitLab. I've added several features to this project on the front end including a brand new front page, Solr search integration, help and blog section as well as many back end features.
 									</div>
-                  
+
 									<div class = 'ss-desc'  id = 'desc-mft'>
                     <h4><a href='http://mymfthours.herokuapp.com'>MyMFTHours.herokuapp.com</a></h4>
                     The client noticed that there was no free way to track client hours for her MFT (Marriage and Family Therapy) degree.  It allows users to track hours in a calender view from FullCalendar.js. Once users have hours tracked they can order and total their hours using pre-programmed BBS rules.
@@ -127,7 +134,7 @@
 									</div>
                   <div class="ss-desc" id="desc-websume">
                     <h4><a href="#">This site</a></h4>
-                    This site was built using HTML5 Boilerplate, Twitter Bootstrap, jQuery and Handlebars.js templates. 
+                    This site was built using HTML5 Boilerplate, Twitter Bootstrap, jQuery and Handlebars.js templates.
                   </div>
                   <div class='ss-desc' id = 'desc-discipline'>
                     <h4><a href="https://chrome.google.com/webstore/detail/you-lack-discipline/eeadgcfnjeklognahpjfofaimpgednii?utm_source=chrome-ntp-icon">You Lack Discipline! Chrome Extension</a></h4>
@@ -152,7 +159,7 @@
                     <div class="item active" id = 'truefit2'>
                       <img class = 'slideshow-image' src="img/truefit2.png" alt="TrueFitTattooSD.com">
                     </div>
-										<div 
+										<div
 										<div class="item" id = "gitlab">
 											<img class= 'slideshow-image' src = 'img/gitlab.png' alt='GitLab'>
 										</div>
@@ -194,29 +201,63 @@
                 <div id = "skill-icons"></div>
                 <script id="skill-icons-template" type="text/x-handlebars-template">
                     {{#each icons}}
-                      <img class = 'skill-icon' src = 'img/skills/{{file}}' data-toggle="tooltip" data-placement="bottom" title='{{desc}}'/> 
+                      <img class = 'skill-icon' src = 'img/skills/{{file}}' data-toggle="tooltip" data-placement="bottom" title='{{desc}}'/>
                     {{/each}}
                 </script>
 
                 <div class="row">
                   <div class="col-sm-3">
                     <h2>Qualcomm Technologies Inc.</h2>
-                    <b>May 2012 - Present</b>
+                    <b>May 2012 - June 2015</b>
                   </div>
                   <div class="col-sm-9">
                     <ul class = 'bordered-list'>
-<li>Currently I'm part of a small, agile team that worked on a fork of <a href="https://github.com/gitlabhq/gitlabhq">GitLab</a>, an open source, self-hosted version control software similar to Github Enterprise and using the Ruby on Rails stack. I have been a full-stack engineer designing library modules to encapsulate Git calls, gaining valuable experience in Ruby on Rails in general, and have lead all major front-end changes since I started using CoffeeScript, Bootstrap, and HAML.
-</li>
-<li>Worked with Qualcomm’s Security team to design and implement a script for parsing embedded C and C++ code to prevent insecure inter-processor communication protocols from being committed without proper security and encryption checks. Used multiprocessing in Python and a Unix cron job to schedule a queue of scans that parsed source code using Pyparsing.
-</li>
-<li>Worked on a Python-based testing framework for Android which involved system calls, creating system processes and multithreading. I also became proficient in Python, Java, and Android Development</li>
+                      <li>
+                        I was a lead engineer on a project that is a fork of Gitlab, an open source,
+                        self-hosted version control software that maintains Qualcomm’s source code, over a
+                        petabyte of data, and keeps it synced across servers around the world. As a full-stack
+                        engineer I have made many contributions, from a Ruby C extension to front-end work, and have
+                        lead all major changes in the application since taking over this project that services over
+                        6000 daily users.  All code is unit-tested thoroughly using RSpec and Capybara.
+                      </li>
+                      <li>
+                        Worked with Qualcomm’s Security team to design and implement a script for parsing embedded C and
+                        C++ code to prevent insecure inter-processor communication protocols from being committed without
+                        proper security and encryption checks. Used multiprocessing in Python and a Unix cron job to schedule
+                        a queue of scans that parsed source code using Pyparsing.
+                      </li>
+                      <li>
+                        Worked on a Python-based testing framework for Android which involved system calls, creating system
+                        processes and multithreading. I also became proficient in Python, Java, and Android Development
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="row" style="margin-top:15px">
+                  <div class="col-sm-3">
+                    <h2>Fullscreen</h2>
+                    <b>June 2015 - Present</b>
+                  </div>
+                  <div class="col-sm-9">
+                    <ul class='bordered-list'>
+                      <li>I am currently a senior engineer working on Fullscreen’s SVOD service on the backend. I have designed, developed and optimized the partner-facing application that allows asset uploads and management through Aspera. </li>
+	                     <li>I wrote several API endpoints for the SVOD app that pull data through our heavily cached and sharded PostgreSQL database.</li>
+                       <li>I am also currently working on optimizing our asset pipeline application to ingest high volumes of data at scale using an AWS stack. There have been many challenges in the media asset intake process that we have overcome as a team.</li>
+                        <li>I have created two gems while at Fullscreen:
+                          <ol>
+                            <li><b>Decider:</b> a gem that wraps complex video metrics and QC tools ( written in C++ ) in Ruby, performs business logic on the results and outputs the decisions to JSON</li>
+                            <li><b>Logplexer:</b> a currently open-sourced gem that depending on your environment, logs to either Honeybadger or the console. I have also handled many dev ops tasks related to provisioning and scaling the application as well as the Aspera instance.</li>
+                          </ol>
+                        </li>
+
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div id = "contact" class = "page">
             <div class = 'container'>
               <div class = "row">
@@ -238,7 +279,7 @@
                       <div class="col-md-4">
                         <h2><a href="https://twitter.com/jryancanty">@jryancanty</a></h2>
                       </div>
-                      
+
                     </div>
                   </div>
 
@@ -278,13 +319,10 @@
                 </div>
               </div>
 						</div>
-            <div class="websume-footer"></div>
+            <canvas id="myCanvas" width="1440" height="244"></canvas>
 					</div>
-
-          
-
         </div>
-      	   
+
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>

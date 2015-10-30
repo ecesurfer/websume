@@ -116,11 +116,18 @@ p, body{
 h1, h2, h3, h4 {
   font-family: aleo;
 }
+h1 {
+  padding-top: 20px;
+}
 a {
   color: #eee;
 }
 a:hover {
   color: #888;
+}
+.my-brand {
+  font-size: 24px;
+  font-family: aleo;
 }
 .page {
  padding-top: 30px;
@@ -152,10 +159,10 @@ a:hover {
   font-family: aaargh;
 }
 .master-nav li:hover{
-  background-color: #555; 
+  background-color: #555;
 }
 .master-nav li.active {
-  background-color: #555; 
+  background-color: #555;
 }
 #home {
   background-color: #B9AE90;
@@ -163,7 +170,7 @@ a:hover {
 }
 #home h3 {
   text-align: center;
-  font-family: aleo; 
+  font-family: aleo;
 }
 .btn-main .btn{
   align-content:center;
@@ -175,14 +182,14 @@ a:hover {
 }
 
 .home-category {
- margin: 40px 0 40px; 
+ margin: 40px 0 40px;
  text-align: center;
 }
 .img-home {
   display:block;
   margin: auto;
   height: 200px;
-  
+
 }
 #projects {
   background-color: #444;
