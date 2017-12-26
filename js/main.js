@@ -7,45 +7,6 @@ initPageClass = function () {
 };
 $(window).resize(initPageClass);
 
-initSlideshowCaptions = function() {
-  $('#websume-carousel').on('slid.bs.carousel', function () {
-    var current = $('.carousel-inner .item.active').prop('id');
-    $('.ss-desc.active').removeClass('active');
-    $('#desc-' + current).addClass('active');
-  });
-};
-
-initSkills = function() {
-  var source = $('#skill-icons-template').html();
-  var template = Handlebars.compile(source);
-  var context = { icons: [
-    {file : "angular.png", desc : "AngularJS | A front-end JavaScript framework designed by Google"},
-    {file : "coffeescript.png", desc: "CoffeeScript | Object-oriented scripting language that compiles into JavaScript"},
-    {file:"emberjs.png", desc : "EmberJS | A front-end framework designed for ambitious web applications. Uses Handlebars.js for templating"},
-    {file:"git.png", desc : "Git | Distributed version control software used by millions including GitHub"},
-    {file:"javascript.png", desc: "JavaScript | The language of the internet...specifically web browsers"},
-    {file:"xcode.png", desc: "iOS Development | Objective C and Swift are the unique languages used to create iOS apps"},
-    {file:"android.png", desc : "Android Development | Using Java and the ADT package are necessary when coding Android apps"},
-    {file:"rails.png", desc : "Ruby on Rails | A web framework that uses Ruby to dominate some of the best web 2.0 apps on the market"},
-    {file:"ruby.png", desc : "Ruby | A powerful object oriented scripting language used in Ruby on Rails"},
-    {file:"terminal.png", desc: "Linux/Unix Terminal | A necessity of any web developer is to know the command line."}] };
-  var html = template(context);
-  $('#skill-icons').html(html);
-  $('[data-toggle="tooltip"]').tooltip();
-}
-
-initScroll = function() {
-	var scrollToTarget = function(el, ms) {
-		var speed = (ms) ? ms :600;
-		$('html,body').animate({scrollTop: $(el).offset().top}, speed);
-	};
-	$('.navbar-nav li a').click(function(ev){
-		ev.preventDefault();
-		target = $(this).data('target');
-		scrollToTarget(target);
-	});
-}
-
 initSoundBars = function() {
   window.requestAnimFrame = (function(callback) {
   return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
@@ -64,11 +25,11 @@ initSoundBars = function() {
     this.height = h;
     this.color = color;
     this.startTime = (new Date()).getTime();
-    this.amplitude = this.random(10,100);
-    this.period = this.random(500, 2000);
+    this.amplitude = this.random(10,120);
+    this.period = this.random(500, 3000);
     this.next = 0;
 
-    this.BASE = 120;
+    this.BASE = 90;
   }
   Bar.prototype.random= function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -88,7 +49,7 @@ initSoundBars = function() {
 
   function animateBars() {
     // Find how many rects can fit in the width of the canvas
-    var width = 30;
+    var width = 20;
     var num_rect = canvas.width / width;
 
     // supposed to draw num_rect number of oscillating rects
@@ -118,11 +79,8 @@ initSoundBars = function() {
 
   animateBars();
 }
+
 $(document).ready( function() {
   initPageClass();
-  initSlideshowCaptions();
-  initSkills();
-	initScroll();
   initSoundBars();
-
 });

@@ -110,15 +110,23 @@ textarea {
   font-weight: bold;
   font-style: normal;
 }
-p, body{
-  font-family: aaargh;
+
+@font-face {
+  font-family: pixel;
+  src: url(../fonts/SHPinscher-Regular.otf);
+  font-weight: regular;
+  font-style: normal;
 }
-h1, h2, h3, h4 {
-  font-family: aleo;
-}
+
 h1 {
+  font-family: pixel;
   padding-top: 20px;
 }
+
+h3 {
+  font-family: pixel;
+}
+
 a {
   color: #eee;
 }
@@ -142,105 +150,15 @@ a:hover {
   font-weight: bold;
 }
 
-.main-navbar {
-  position: fixed;
-  top: -1;
-  width: 100%;
-  height: auto;
-  background-color: #333;
-  z-index:1000;
-}
-.main-navbar h2 {
-  display: inline;
-  color: #888;
-}
-.master-nav li{
-  display: inline-block;
-  font-family: aaargh;
-}
-.master-nav li:hover{
-  background-color: #555;
-}
-.master-nav li.active {
-  background-color: #555;
-}
-#home {
-  background-color: #B9AE90;
-  color: #333;
-}
-#home h3 {
-  text-align: center;
-  font-family: aleo;
-}
-.btn-main .btn{
-  align-content:center;
-  width: 300px;
-  height: auto;
-  font-family: aleo;
-  font-size: 32px;
-  margin: 0 auto;
-}
-
-.home-category {
- margin: 40px 0 40px;
- text-align: center;
-}
-.img-home {
-  display:block;
-  margin: auto;
-  height: 200px;
-
-}
-#projects {
-  background-color: #444;
-}
-#websume-carousel {
- margin-bottom: 40px;
-}
-.slideshow-image {
-  width: auto;
-  margin: 0 auto;
-  border: thick;
-  padding:1px;
-  border:1px solid #eee;
-  background-color:#111;
-}
-
-.descriptions {
-  padding: 20px;
-  margin: 0 auto;
-  text-align: center;
-}
-.ss-desc {
-  display: none;
-}
-.ss-desc.active {
-  display: block;
-  margin: 15px;
-  height: 80px;
-}
-#skills {
-  background-color: #B9AE90;
-  color: #333;
-}
-.skill-icon {
-  margin:50px;
-  width: 128px;
-  height: auto;
-}
-.bordered-list {
-  list-style-type: none;
-}
-.bordered-list li {
-  border-bottom: solid 1px rgba(230, 230, 230, .5);
-  padding-bottom: 15px;
-  margin-top:20px;
-}
 #contact {
   background-color: #444;
 }
+.gravatar {
+  border-radius: 50px;
+  border: solid 5px #333;
+}
 .contact-icon {
-  height: 80px;
+  height: 30px;
   margin:10px;
   width: auto;
 }
@@ -253,9 +171,21 @@ a:hover {
   height:100px;
   background-color: #ddd;
 }
+.tweets {
+  height: 450px;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: -10px 10px 6px -6px black;
+}
 
-
-
+#myCanvas {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 300px;
+  width: 100%
+  /*z-index: -1;*/
+}
 
 
 
