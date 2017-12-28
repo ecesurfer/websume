@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/jryancanty
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jryancanty.com
+  * I am jryancanty (https://keybase.io/jryancanty) on keybase.
+  * I have a public key with fingerprint 3408 F899 4B63 E528 C643  1C37 4B6D 175C B983 EBFD
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01015c6f416fc623d238ee0e8e665b7be52a64b08b20f20fd3d35ad2971ca13595700a",
+      "fingerprint": "3408f8994b63e528c6431c374b6d175cb983ebfd",
+      "host": "keybase.io",
+      "key_id": "4b6d175cb983ebfd",
+      "kid": "01015c6f416fc623d238ee0e8e665b7be52a64b08b20f20fd3d35ad2971ca13595700a",
+      "uid": "3ea8f2efeb256efc76c3412cbb38bf19",
+      "username": "jryancanty"
+    },
+    "merkle_root": {
+      "ctime": 1514486498,
+      "hash_meta": "e76699be5af7b2fcaa8132536a627abff96223da37bbc66383e7859dc97e2cca",
+      "seqno": 1865196
+    },
+    "revoke": {
+      "sig_ids": [
+        "85a0600de6dcfb9f1136026092ece69f54d2fa42b36bd07fa86792eccbf9fa970f"
+      ]
+    },
+    "service": {
+      "hostname": "jryancanty.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1514486502,
+  "expire_in": 157680000,
+  "prev": "9c0d46c85c6ae0010eb41debb21fdd450119a197ae7fcdd8bc28d89ab8a0b0a9",
+  "seqno": 52,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMK0AnicrVNtaBxFGL6kmrRXDoqmUkSMXQgVjWVmd2d25ig0KH5AyY8SqNgPLvPx
+zt16d7uX3c3Zs8RiI0IpKLRQJa2gNmA/7I+WRpCW0qZBLGrBWioWESMaMeAPlaI/
+KnU2KCL602VhmZnnfZ7nffadudKyQrGrZ2N9+Nji6PWuj2afHy9sfby8sMuRse44
+5V1OHZY+0NCQZpV6qJ2ygzDCRFHjY2oUdT3tegwAAQNKiQwkEFdQXyImXWTsqz3t
+EaFdHmAlsEc4CRASzqBjwqgKSSsJo8zSej5ihnHuS+pZCqao72HlBXatcUCU5MwD
+abQtrMVpXmHNSZHC+jC2e3ZRWbL3H/j/2ff4Ep0HghkXDEiXUDAqoMrzsauk9Jg0
+mOfAFJJINMGin006IlIiyjrOxKDThKTegEoSx1ker8rCHIQJ9n1Gfc5siyKtVZqQ
+CVsLAaWcW3/CBNI1SgiGPZd4VFA3ENIYTl3bjvACKRWlnu07YIRrxQNwlcotpzAW
+xVaBUYI5tQ4SaMd1yMXTsGqDS53yNocRgShCGqhWRnKDsUeRSxF3QQHlhvjaNcJ3
+pUelRoERjAb5mZKGG8EDZJwdE7lY0g7VEnn+p/6VwHoVN62nVhJnsYob9qyWZa20
+nCeTdVo5+DmQlT9pKjKMtJ0UW9GGJA3jyPZhkf8MjSB30IGdrTCBSpgjSEAZsk+u
+A21LyRXSPlXMjoAAZIcBpI81SOlio7VPEMZcYB4ICIzSmknlMs24kEwgiQT/O0Vi
+pTJRtZw2u0hk4wk4E7MXtt9R6CoWeu7szq9Qobhi1V8Xa+Xh3tv1tY2nX2lM74ke
+WjE+uOc3f2D00mtofqhnfvHo8ePO7v19k/f/cPLLs998fe8DZ3d++tiZJ0df3nTq
++9aFvY/2tz8fUqsfvisprcUHe3cXB5KtG2bepm8c+Dhsiu333Dz2zI2REfrrqi2T
+5enC7dLNI29dnbybd1+5/sh7I2T5zNH5mb1Rf+3alVvF8Mf+g6duDS9MvTtWv7z8
+w+Flm0/+3j29bnjNwmwG003c2fDz5vOlvgnz+mnRW188VL285dsj2+Z2rFx932ch
+7Ts8V32wpiobB3pJNPvEAfHFq98denFTkZ64+M4nF0/0l4bWXFp3Y/++04tfvXn1
+pfdfuNaa2vfLUzD1QXauOfbTH/5WgMU=
+=s7mf
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jryancanty
+
+==================================================================
+
